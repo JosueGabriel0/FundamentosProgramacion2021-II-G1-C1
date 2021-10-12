@@ -17,7 +17,7 @@ public class PagoServTelef {
     String dia, turno;
     int minL=0;     
     double pagoL=0, pImpuesto=0, totalPago=0;
-    //Datos dee entrada
+    //Datos de entrada
     System.out.print("Ingrese Min de llamada:");
     minL=sc.nextInt();
     System.out.print("\nDia de llamada:");
