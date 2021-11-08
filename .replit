@@ -1,2 +1,2 @@
-language = "bash"
-run = ""
+language = "java"
+run = "java -jar SubProgramasMVN/target/SubProgramasMVN-1.0-SNAPSHOT.jar"

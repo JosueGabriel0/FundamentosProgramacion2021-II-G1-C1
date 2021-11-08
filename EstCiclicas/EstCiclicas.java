@@ -40,8 +40,9 @@ static void suma20mumerosParesFor(){
 
       if(numInit%2==0){
         sumaNumPar=sumaNumPar+numInit;
+        System.out.println("numInit:"+numInit+ " sumaNumPar:"+sumaNumPar);
       }
-      System.out.println("numInit:"+numInit+ " sumaNumPar:"+sumaNumPar);      
+            
     }
   //Datos de Salida
     System.out.println("La suma de numeros pares entre 1 y 20 es:"+sumaNumPar);
