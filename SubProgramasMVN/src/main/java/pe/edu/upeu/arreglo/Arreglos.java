@@ -3,8 +3,9 @@ package pe.edu.upeu.arreglo;
 import pe.edu.upeu.modelo.Persona;
 
 public class Arreglos{
+
+  public static void ejemploVectores01(){
   
-  public static void main(String [] args){
     //1.Declaramos un arreglo de enteros
     int edades[];
     //2. Instanciamos el arreglo de enteros
@@ -28,9 +29,46 @@ public class Arreglos{
     System.out.println("Arreglo personas indice 1: Nombre"+personas[1].nombre+ 
     " Apellidos:"+personas[1].apellidos+" DNI:"+personas[1].dni);
 
+
+
+
+  }
+
+  public static void ejemploVectores02(){
+    String nombres[]={"Sara","Laura","Carlos","Carmen"};
+    System.out.println("Tamaño vector: "+nombres.lenght);
+  
+  }
+
+  public static void ejemploMatrices01(){
+    int edades[][];//int
+    edades=new int[3][2];//Definir Tamaño
+
+    edades[0][0]=30;
+    edades[0][1]=15;
+    edades[1][0]=20;
+    edades[1][1]=45;
+    edades[2][0]=5;
+    edades[2][1]=38;
+    //edad[2][2]=40;//Error
+
+    System.out.println("Matriz(0,0): "+edades[1][0]);
+
+    for(int i=0;i<edades.lenght;i++){
+      for(int j=0;j<edades.lenght;j++){
+         System.out.println("M["+i+"]["+j+"]: "+edades[i][j]);
+      }
+    }
+  }
+
+  
+  public static void main(String [] args){
+    //ejemploVectores01();
+    //ejemploVectores02();
+    ejemploMatrices01();
+
   }
 
 
 
   
-}
