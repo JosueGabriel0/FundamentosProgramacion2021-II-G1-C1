@@ -24,9 +24,9 @@ public class Arreglos{
     personas[0] = new Persona("Juan", "Quispe", "54873221");
     personas[1] = new Persona("Karla", "Apaza", "45879865");
 
-    System.out.println("Arreglo personas indice 0: Nombre"+personas[0].nombre+ 
+    System.out.println("Arreglo personas indice 0: Nombre "+personas[0].nombre+ 
     " Apellidos:"+personas[0].apellidos+" DNI:"+personas[0].dni);
-    System.out.println("Arreglo personas indice 1: Nombre"+personas[1].nombre+ 
+    System.out.println("Arreglo personas indice 1: Nombre "+personas[1].nombre+ 
     " Apellidos:"+personas[1].apellidos+" DNI:"+personas[1].dni);
 
 
@@ -36,7 +36,7 @@ public class Arreglos{
 
   public static void ejemploVectores02(){
     String nombres[]={"Sara","Laura","Carlos","Carmen"};
-    System.out.println("Tamaño vector: "+nombres.lenght);
+    System.out.println("Tamaño vector: "+nombres.length);
   
   }
 
@@ -54,8 +54,8 @@ public class Arreglos{
 
     System.out.println("Matriz(0,0): "+edades[1][0]);
 
-    for(int i=0;i<edades.lenght;i++){
-      for(int j=0;j<edades.lenght;j++){
+    for(int i=0;i<edades.length;i++){
+      for(int j=0;j<edades.length;j++){
          System.out.println("M["+i+"]["+j+"]: "+edades[i][j]);
       }
     }
@@ -66,6 +66,7 @@ public class Arreglos{
     //ejemploVectores01();
     //ejemploVectores02();
     ejemploMatrices01();
+  }
 
   }
 
