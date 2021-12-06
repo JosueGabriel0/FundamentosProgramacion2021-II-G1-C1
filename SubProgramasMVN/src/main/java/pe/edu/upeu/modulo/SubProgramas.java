@@ -1,7 +1,7 @@
 package pe.edu.upeu.modulo;
 
 public class SubProgramas{
-
+ //Atributos
   public String nombre="David";
   public String dni=""; 
 

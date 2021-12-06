@@ -7,9 +7,12 @@ static Scanner sc= new Scanner(System.in);
   public long factorial(int numero){
    if(numero>1){
      return factorial(numero-1)*numero; 
-   }
+   }else{
 
     return 1;
+   }
+
+    
   }
 
   public BigInteger factorial(long numero){

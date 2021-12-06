@@ -1,4 +1,5 @@
 package pe.edu.upeu.utils;
+
 public class ImprimirArreglos{
     public  void imprimirVector(Object[] vector){
         for(int indice=0; indice<vector.length;indice++){

@@ -11,7 +11,7 @@ public class App{
   
 
     static void menuOpciones(){ 
-    SubProgramas sp=new SubProgramas();
+    
     int opcionesA=0;
     System.out.println("-------------------------------");
     String msg="\nIngrese el Algoritmo que desea Probar"+ 
@@ -48,7 +48,7 @@ public class App{
           System.out.println(rc.fibonacciNrecBig(nxxx));break;
           
           default:
-            System.out.println("El Algoritmo no existe!");  
+          System.out.println("El Algoritmo no existe!");  
         }   
       System.out.println("------------------------------");  
       opcionesA=lt.leer(0,msg);  
