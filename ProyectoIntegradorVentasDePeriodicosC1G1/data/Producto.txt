@@ -7,3 +7,5 @@ P6	Libero	Periodico	0.4	0.1	150	Unidad
 P7	OJO	Periodico	0.5	0.2	110	Unidad
 P8	Los Andes	Periodico	0.7	0.3	110	Unidad
 P9	Peru21	Periodico	0.7	0.3	110	Unidad
+P10	F	F	2.0	2.0	13	G
+P11	r	y	4.0	4.0	4	y

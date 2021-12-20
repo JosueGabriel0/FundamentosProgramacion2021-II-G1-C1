@@ -6,7 +6,7 @@ import pe.edu.upeu.modelo.ClienteTO;
  */
 public class App {
 
-    public static ClienteTO[] cliente;
+    public static ClienteTO cliente[];
 
     public static void ejemploCleinteVector(){
         System.out.println( "Hello Josue!" );
@@ -29,6 +29,7 @@ public class App {
     public static void main( String[] args ){
        MenuPrincipal mp=new MenuPrincipal();
        mp.mainLogin();
+       //ejemploCleinteVector();
         
     }
 }

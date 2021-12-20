@@ -100,50 +100,50 @@ public class AppCrud {
     }
 
     public Object[][] editarRegistro(LeerArchivo aq, int numIdColumModelo, String dato, Object modelo){
-        Object[][] datosAnt=listarContenido(aq);
-        Field[] fields = (modelo).getClass().getDeclaredFields();
-        List<String> lista2 = new ArrayList();
-        int numFilasX=-1;  
-        try {
-            lista2=aq.leer();           
-            for (int i = 0; i < lista2.size(); i++) {
-                String[] column=(lista2.get(i).toString()).split("\t");
-                if(column[numIdColumModelo].equals(dato)){ numFilasX=i; break; }
-            }
-            if(numFilasX>=0){
-            int primero=0;
-            for(Field field : fields) {
-                String fieldName = field.getName();
-                Object fieldValue = field.get(modelo);                
-                if(fieldValue!=null && !fieldValue.equals("") && numIdColumModelo!=primero && !fieldValue.equals(0) && !fieldValue.equals(0.0)){
-                    datosAnt[numFilasX][primero]=fieldValue;
-                }                
-                System.out.println(fieldName + ":"+ fieldValue);
-                primero++;
-            }            
-            }
-        } catch (Exception e) {
-            e.getMessage();
-        }
-        lista2 = new ArrayList();	
-        String contenido="";
-        for (int j = 0; j < datosAnt.length; j++) {                                               
-            for(int k=0; k<datosAnt[0].length;k++){
-                if(k==0){
-                    contenido+=datosAnt[j][k];
-                }else{
-                    contenido+="\t"+datosAnt[j][k];
+            Object[][] datosAnt=listarContenido(aq);
+            Field[] fields = (modelo).getClass().getDeclaredFields();
+            List<String> lista2 = new ArrayList();
+            int numFilasX=-1;  
+            try {
+                lista2=aq.leer();           
+                for (int i = 0; i < lista2.size(); i++) {
+                    String[] column=(lista2.get(i).toString()).split("\t");
+                    if(column[numIdColumModelo].equals(dato)){ numFilasX=i; break; }
                 }
+                if(numFilasX>=0){
+                int primero=0;
+                for(Field field : fields) {
+                    String fieldName = field.getName();
+                    Object fieldValue = field.get(modelo);                
+                    if(fieldValue!=null && !fieldValue.equals("") && numIdColumModelo!=primero && !fieldValue.equals(0) && !fieldValue.equals(0.0)){
+                        datosAnt[numFilasX][primero]=fieldValue;
+                    }                
+                    System.out.println(fieldName + ":"+ fieldValue);
+                    primero++;
+                }            
+                }
+            } catch (Exception e) {
+                e.getMessage();
             }
-            lista2.add(contenido);
-            contenido="";
-        }    
-        try {
-                aq.escribir(lista2);
-        } catch (Exception e) { e.getMessage();
-        }         
-        return datosAnt;
-    }
+            lista2 = new ArrayList();	
+            String contenido="";
+            for (int j = 0; j < datosAnt.length; j++) {                                               
+                for(int k=0; k<datosAnt[0].length;k++){
+                    if(k==0){
+                        contenido+=datosAnt[j][k];
+                    }else{
+                        contenido+="\t"+datosAnt[j][k];
+                    }
+                }
+                lista2.add(contenido);
+                contenido="";
+            }    
+            try {
+                    aq.escribir(lista2);
+            } catch (Exception e) { e.getMessage();
+            }         
+            return datosAnt;
+        }
 
     public Object[][] eliminarRegistros(LeerArchivo aq, int numIdColumModelo, String dato){
         Object[][] datosAnt=listarContenido(aq);

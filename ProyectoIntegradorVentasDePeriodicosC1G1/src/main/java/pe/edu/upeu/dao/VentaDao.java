@@ -16,16 +16,20 @@ import pe.edu.upeu.utils.LeerTeclado;
 import pe.edu.upeu.utils.UtilsX;
 
 public class VentaDao extends AppCrud{
+    //Objetos
     LeerTeclado leerTecla=new LeerTeclado();
     UtilsX util=new UtilsX();
-
+    SimpleDateFormat formatofechahora = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+    SimpleDateFormat formatofecha = new SimpleDateFormat("dd-MM-yyyy");
     Ansi color=new Ansi();
 
+    //Crear txt
     final String TABLA_VENTAS="Ventas.txt";
     final String TABLA_VENTA_DETALLE="VentaDetalle.txt";
     final String TABLA_PRODUCTO="Producto.txt";
     final String TABLA_CLIENTE="Cliente.txt";
 
+    //VentaTO
     LeerArchivo leerArch;
 
     ProductoTO prodTO;
@@ -33,8 +37,7 @@ public class VentaDao extends AppCrud{
     VentaDetalleTO ventaDetalleTO;
     ClienteTO clienteTO;
 
-    SimpleDateFormat formatofechahora = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-    SimpleDateFormat formatofecha = new SimpleDateFormat("dd-MM-yyyy");
+    
 
 
     public void registrarVenta() {
