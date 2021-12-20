@@ -29,7 +29,7 @@ public class VentaDao extends AppCrud{
     final String TABLA_PRODUCTO="Producto.txt";
     final String TABLA_CLIENTE="Cliente.txt";
 
-    //VentaTO
+    //variables
     LeerArchivo leerArch;
 
     ProductoTO prodTO;
